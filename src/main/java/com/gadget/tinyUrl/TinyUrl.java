@@ -1,6 +1,7 @@
 package com.gadget.tinyUrl;
 
 import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -13,12 +14,11 @@ import javax.persistence.GenerationType;
 
 
 @Entity
-@Table
 public class TinyUrl {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
-	private long id;
+	private Long id;
 	@Column
 	private String originalUrl;
 	@Column
@@ -26,11 +26,11 @@ public class TinyUrl {
 	@Column
 	private String user;
 	
-	public TinyUrl(String originalUrl, String user) {
+	public TinyUrl(String originalUrl) {
 		this.originalUrl = originalUrl;
-		this.user = user;
 		this.tinyUrl = Hashing.murmur3_32().hashString(originalUrl, StandardCharset.UTF_8).toString();
-		this.user = user;
+				
+		this.user = "Devin";
 	}
 	
 	public TinyUrl() {}
