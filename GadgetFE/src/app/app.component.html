@@ -1,0 +1,54 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<section class="section services-section" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-title">
+                    <h2>What I Do</h2>
+                    <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- feaure box -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="feature-box-1">
+                    <div class="icon">
+                        <i type="button" class="fa fa-desktop" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h5>TinyUrl Creator</h5>
+                        <p>I create tiny versions of URLs</p>
+                    </div>
+                </div>
+            </div>
+            <!-- / -->
+            <!-- TinyUrl Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">TinyUrl Creator</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                     <form #createForm="ngForm" id="createForm">
+                       <label>Original Url:</label><br>
+                       <input type="text" id="originalUrl" ngModel name="originalUrl" size="25"><br>
+                       <button type="submit" class="btn btn-default" [disabled]="!createForm.form.valid"
+                       (click)="onCreateTiny(createForm)">Evolve</button><br>
+                       <label>Tiny Url:</label>
+                       <p>{{tinyUrl.tinyUrl}}</p> 
+                     </form>
+                     <output form="createForm"></output>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" id="tCreate" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
