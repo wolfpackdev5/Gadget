@@ -1,0 +1,38 @@
+
+<table class="calculator">
+    <tr>
+      <td colspan="3"><input class="display" type="text" id="display" ></td>
+      <td><input type="button" value="Clear"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="1" (click)="display('1')"></td>
+      <td><input type="button" value="2" (click)="display('2')"></td>
+      <td><input type="button" value="3" (click)="display('3')"></td>
+      <td><input type="button" value="+" (click)="display(' + ')"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="4" (click)="display('4')"></td>
+      <td><input type="button" value="5" (click)="display('5')"></td>
+      <td><input type="button" value="6" (click)="display('6')"></td>
+      <td><input type="button" value="-" (click)="display(' - ')"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="7" (click)="display('7')"></td>
+      <td><input type="button" value="8" (click)="display('8')"></td>
+      <td><input type="button" value="9" (click)="display('9')"></td>
+      <td><input type="button" value="/" (click)="display(' / ')"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="." (click)="display('.')"></td>
+      <td><input type="button" value="0" (click)="display('0')"></td>
+      <td><input type="button" value="%" (click)="display('%')"></td>
+      <td><input type="button" value="*" (click)="display(' * ')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="=" (click)="sendToBack()" width="50%"></td>
+    </tr>
+</table>
+<div class="answer">
+  <h1>Answer:</h1>
+  <h1>{{result}}</h1>
+</div>

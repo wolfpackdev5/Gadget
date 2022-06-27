@@ -1,0 +1,17 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<div class="container">
+    <h1>Welcome to the TinyUrl Creator!</h1>
+        <div class="banner">
+            <div class="form-box">
+                <form #createForm="ngForm" id="createForm">
+                    <label>Your URL:</label><br>
+                    <input type="text" ngModel name="originalUrl" value="" placeholder="put your URL here, then press evolve to see the magic">
+                    <button type="submit" [disabled]="!createForm.form.valid" (click)="CreateTiny(createForm)">Evolve</button>
+                </form>
+            </div>
+        </div>
+        <h2>http://localhost:8080/{{tinyUrl.tinyUrl}}</h2>
+</div>
+

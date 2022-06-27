@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { tinyUrl } from './tinyUrl';
+import { tinyUrl } from '../model/tinyUrl';
 import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 
@@ -17,6 +17,7 @@ export class TinyUrlService {
 }
 
   public addTiny(originalUrl: string): Observable<tinyUrl> {
+    console.log(originalUrl);
       return this.http.post<tinyUrl>(`${this.apiServerUrl}/create`, originalUrl);
   }
 

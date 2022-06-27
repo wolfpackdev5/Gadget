@@ -1,0 +1,43 @@
+.container {
+    width: 100%;
+    height: 350px;
+    
+}
+
+
+.container h1 {
+    text-align: center;
+}
+
+.banner {
+    border: 2px solid black;
+    height: 200px;
+    padding-bottom: 25px;
+
+}
+
+.form-box {
+    padding: 25px;
+    align-self: center;
+    margin: auto;
+   display: flex;
+   align-items: center;
+}
+
+.form-box label {
+    font-size: 24px;
+    padding-bottom: 15px;
+}
+
+.form-box input {
+    width: 500px;
+}
+
+.form-box button {
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    color: white;
+}
+
+

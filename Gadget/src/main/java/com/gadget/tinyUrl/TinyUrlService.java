@@ -28,14 +28,18 @@ public class TinyUrlService {
 	 * @return TinyUrl object created from the constructor method 
 	 */
 	public TinyUrl createTinyUrl(String originalUrl) {
+		
 		TinyUrl tiny = new TinyUrl(originalUrl);
+		
+		
 		tur.save(tiny);
+		
 		return tiny;
 	}
 	
 	public TinyUrl findTinyUrl(String tinyUrl) {
-		TinyUrl thisOne = this.tur.findByTinyUrl(tinyUrl);
-		return thisOne;
+		return tur.findByTinyUrl(tinyUrl);
+		
 	}
 
 }

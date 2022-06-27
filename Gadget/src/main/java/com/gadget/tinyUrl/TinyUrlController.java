@@ -41,6 +41,8 @@ public class TinyUrlController {
 	 */
 	@PostMapping("create")
 	public ResponseEntity<TinyUrl> createTiny(@RequestBody String originalUrl) {
+		
+		System.out.println(originalUrl);
 		TinyUrl tiny = tus.createTinyUrl(originalUrl);
 		return new ResponseEntity<>(tiny, HttpStatus.OK);
 	}
@@ -51,8 +53,10 @@ public class TinyUrlController {
 	 */
 	@GetMapping("{tinyUrl}")
 	public ResponseEntity<?> redirectToUrl(@PathVariable("tinyUrl") String tinyUrl, HttpServletResponse response) throws IOException {
-		TinyUrl redirect = tus.findTinyUrl(tinyUrl);
-		response.sendRedirect(redirect.getOriginalUrl());
+		
+		TinyUrl tiny = tus.findTinyUrl(tinyUrl);
+		
+		response.sendRedirect(tiny.getOriginalUrl());
 		
 		return null;
 	}
