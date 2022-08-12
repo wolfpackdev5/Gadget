@@ -1,4 +1,4 @@
-package com.gadget.tinyUrl;
+package com.gadget.TinyUrl;
 import java.util.List;
 
 

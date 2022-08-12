@@ -1,4 +1,4 @@
-package com.gadget.tinyUrl;
+package com.gadget.TinyUrl;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
